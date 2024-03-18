@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         listUsersButton.setOnClickListener(view -> {
-            // Change this to ListUserInRecycleViewActivity.class if you implement RecyclerView
             Intent intent = new Intent(MainActivity.this, ListUserInTextViewActivity.class);
             startActivity(intent);
         });
