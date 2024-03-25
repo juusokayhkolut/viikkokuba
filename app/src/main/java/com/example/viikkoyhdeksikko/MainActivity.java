@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        UserStorage.getInstance().loadUsersFromFile(this);
+
         addUserButton = findViewById(R.id.addUserButton);
         listUsersButton = findViewById(R.id.listUsersButton);
 

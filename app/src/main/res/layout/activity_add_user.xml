@@ -1,62 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-        <EditText
-            android:id="@+id/editFirstName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="First Name"/>
+        android:hint="First name"
+        android:layout_marginTop="20dp" />
 
-        <EditText
-            android:id="@+id/editLastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Last Name"/>
+    <EditText
+        android:id="@+id/editLastName"
+        android:layout_below="@id/editFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last name"
+        android:layout_marginTop="20dp" />
 
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"/>
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_below="@id/editLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:layout_marginTop="20dp" />
 
-        <RadioGroup
-            android:id="@+id/radioDegreeProgram"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/seRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Software Engineering"/>
-            <RadioButton
-                android:id="@+id/imRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Industrial Management"/>
-            <RadioButton
-                android:id="@+id/ceRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Computational Engineering"/>
-            <RadioButton
-                android:id="@+id/eeRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Electrical Engineering"/>
-        </RadioGroup>
+    <RadioGroup
+        android:id="@+id/radioDegreeProgram"
+        android:layout_below="@id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
-        <Button
-            android:id="@+id/addUserButton"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@+id/radioSoftwareEngineering"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add User"/>
-    </LinearLayout>
-</ScrollView>
+            android:text="Software Engineering" />
+
+        <RadioButton
+            android:id="@+id/radioIndustrialManagement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Industrial Management" />
+
+        <RadioButton
+            android:id="@+id/radioComputationalEngineering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computational Engineering" />
+
+        <RadioButton
+            android:id="@+id/radioElectricalEngineering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electrical Engineering" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/bcCheckBox"
+        android:layout_below="@id/radioDegreeProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B.Sc."
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/msCheckBox"
+        android:layout_below="@id/bcCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M.Sc."
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/lciCheckBox"
+        android:layout_below="@id/msCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lic."
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/phdCheckBox"
+        android:layout_below="@id/lciCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ph.D."
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/addUserButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add User"
+        android:layout_below="@id/phdCheckBox"
+        android:layout_marginTop="24dp" />
+</RelativeLayout>
